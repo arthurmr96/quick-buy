@@ -10,7 +10,10 @@
 
         public override void Validar()
         {
-            throw new System.NotImplementedException();
+            if(ProdutoId == 0)
+            {
+                MensagemValidacao.Add("Qual o produto a ser adicionado?");
+            }
         }
     }
 }

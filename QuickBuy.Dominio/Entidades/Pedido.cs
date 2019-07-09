@@ -43,6 +43,11 @@ namespace QuickBuy.Dominio.Entidades
                 MensagemValidacao.Add("Item de Pedido não pode ficar vazio");
             }
 
+            if(UsuarioId == 0)
+            {
+                MensagemValidacao.Add("Qual usuário está fazendo o pedido?");
+            }
+
             if (string.IsNullOrEmpty(CEP))
             {
                 MensagemValidacao.Add("CEP é obrigatório");

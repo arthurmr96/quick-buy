@@ -16,7 +16,10 @@ namespace QuickBuy.Dominio.Entidades
 
         public override void Validar()
         {
-            throw new NotImplementedException();
+            if(Preco == 0)
+            {
+                MensagemValidacao.Add("Qual o preço do produto?");
+            }
         }
     }
 }
