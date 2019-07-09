@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace QuickBuy.Dominio.Entidades
 {
-    class Pedido : Entidade
+    public class Pedido : Entidade
     {
         public int Id { get; set; }
 
