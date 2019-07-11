@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-12 col-md-8 offset-md-2 col-lg-4 offset-lg-4">
+    <div class="card card-default">
+      <h4 class="card-header bg-primary text-white card-title text-center">Login do Cliente</h4>
+      <div class="card-body">
+        <div class="text-center">
+          <form>
+            <div class="form-row form-group">
+              <label for="inputEmail" class="sr-only">Email</label>
+              <input type="email" id="inputEmail"
+                     name="email" placeholder="Digite seu email"
+                     [(ngModel)]="usuario.email"
+                     class="form-control" #email="ngModel"
+                     required />
+            </div>
+
+            <div class="alert alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+              Digite um email válido
+            </div>
+
+            <div class="form-row form-group">
+              <label for="inputSenha" class="sr-only">Senha</label>
+              <input type="password" id="inputEmail"
+                     name="senha" placeholder="Digite sua senha"
+                      [(ngModel)]="senha"
+                     class="form-control" #senha="ngModel"
+                     required />
+            </div>
+
+            <div class="form-row form-group">
+              <button class="btn btn-primary btn-block" type="submit">Entrar</button>
+              <a class="btn btn-link btn-block">Esqueci minha senha</a>
+              <hr />
+              <button class="btn btn-secondary btn-block" type="submit" (click)="entrar()">Cadastrar</button>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
